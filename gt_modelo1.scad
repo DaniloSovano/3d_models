@@ -1,10 +1,9 @@
 $fn = 50;
-largura_esp = 30; 
-profundidade_esp = 38;
 
-larg = 31;
-alt = 11;
-prof = 45;
+
+larg = 34;
+alt = 12;
+prof = 45.5;
 esp = 2;
 
 module caixa() {
@@ -16,6 +15,10 @@ module caixa() {
         
         // Furo para fixação do imã
         translate([0,0,-8]) ima();
+        translate([12,-14,-8]) ima();
+        translate([-12,-14,-8]) ima();
+        translate([-12,-14,-8]) ima();
+        translate([-12,17,-8]) ima();
     }
 }
 
@@ -27,12 +30,22 @@ module tampa() {
 }
 
 module DS18B20() {
-    cylinder(d=6, h=51, center=true);
+    cylinder(d=6.8, h=54, center=true);
 }
 
 module ima() {
-    cylinder( d=8, h=3, center=true);
+    cylinder( d=8.2, h=3, center=true);
 }
-
+module nicho(){
+    cube([36,3.4,0.6]);
+    
+    
+}
 //translate([0,-24,0]) tampa();
-rotate([-90,0,0]) caixa(); 
+//rotate([0,0,-90])
+
+        //nicho para melhor encaixe
+translate([14,19,0])rotate([0,0,-90])nicho();
+translate([-17,19,0])rotate([0,0,-90])nicho();
+
+caixa(); 
