@@ -1,9 +1,9 @@
 $fn = 50;
 
 
-larg = 34;
-alt = 12;
-prof = 45.5;
+larg = 33;
+alt = 11;
+prof = 45;
 esp = 2;
 
 module caixa() {
@@ -15,10 +15,7 @@ module caixa() {
         
         // Furo para fixação do imã
         translate([0,0,-8]) ima();
-        translate([12,-14,-8]) ima();
-        translate([-12,-14,-8]) ima();
-        translate([-12,-14,-8]) ima();
-        translate([-12,17,-8]) ima();
+     
     }
 }
 
@@ -41,11 +38,6 @@ module nicho(){
     
     
 }
-//translate([0,-24,0]) tampa();
-//rotate([0,0,-90])
 
-        //nicho para melhor encaixe
-translate([14,19,0])rotate([0,0,-90])nicho();
-translate([-17,19,0])rotate([0,0,-90])nicho();
 
 caixa(); 
