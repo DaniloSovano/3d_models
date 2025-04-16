@@ -32,7 +32,7 @@ module caixa() {
 module tampa() {
     difference() {
         translate([0,esp,0]) cube([larg+2*esp,esp,alt+2*esp], center=true);
-        cube([8,10,3], center = true);
+        translate([0,0,4])cube([8,10,3], center = true);
     }
 }
 
@@ -48,7 +48,7 @@ module nicho(){
     
     
 }
-//translate([0,-24,0]) tampa();
+translate([0,-30,0]) tampa();
 //rotate([0,0,-90])
 
         //nicho para melhor encaixe
