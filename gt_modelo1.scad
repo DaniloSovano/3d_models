@@ -52,7 +52,7 @@ translate([0,-30,0]) tampa();
 //rotate([0,0,-90])
 
         //nicho para melhor encaixe
-translate([14,19,-0.2])rotate([0,0,-90])nicho();
-translate([-17,19,-0.2])rotate([0,0,-90])nicho();
-
-caixa(); 
+//translate([14,19,-0.2])rotate([0,0,-90])nicho();
+//translate([-17,19,-0.2])rotate([0,0,-90])nicho();
+//
+//caixa(); 
