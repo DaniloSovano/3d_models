@@ -4,7 +4,7 @@ $fn = 50;
 larg = 34;
 alt = 12;
 prof = 45.5;
-esp = 2;
+esp = 2.5;
 
 module caixa() {
     difference() {
@@ -16,7 +16,6 @@ module caixa() {
         // Furo para fixação do imã
         translate([0,0,-8]) ima();
         translate([12,-14,-8]) ima();
-        translate([-12,-14,-8]) ima();
         translate([-12,-14,-8]) ima();
         translate([-12,17,-8]) ima();
     }
@@ -30,11 +29,11 @@ module tampa() {
 }
 
 module DS18B20() {
-    cylinder(d=6.8, h=54, center=true);
+    cylinder(d=7, h=54, center=true);
 }
 
 module ima() {
-    cylinder( d=8.2, h=3, center=true);
+    cylinder( d=8.3, h=3.5, center=true);
 }
 module nicho(){
     cube([36,3.4,0.6]);
