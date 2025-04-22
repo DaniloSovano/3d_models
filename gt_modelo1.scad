@@ -15,12 +15,7 @@ module caixa() {
         furo_uniforme();
     
        
-        
-        // Furo para fixação do imã
-      translate([0,0,-8.5]) ima();
-        translate([12,-14,-8.5]) ima();
-        translate([-12,-14,-8.5]) ima();
-        translate([-12,17,-8.5]) ima();
+       
     }
 }
 module furo_uniforme(){
