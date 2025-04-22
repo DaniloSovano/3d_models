@@ -1,10 +1,10 @@
-$fn = 50;
+$fn = 100;
 
 
 larg = 34;
 alt = 12;
 prof = 45.5;
-esp = 2.5;
+esp = 3.5;
 
 module caixa() {
     difference() {
@@ -12,20 +12,21 @@ module caixa() {
         cube([larg,prof,alt], center=true);
         
         // Furo para o sensor DS18B20
-        translate([12.5,20,-7]) rotate([90,0,0]) DS18B20();
-        translate([12.5,20,-6.5]) rotate([90,0,0]) DS18B20();
-        translate([12.5,20,-6]) rotate([90,0,0]) DS18B20();
-        translate([12.5,20,-5.5]) rotate([90,0,0]) DS18B20();
-        translate([12.5,20,-5]) rotate([90,0,0]) DS18B20();
-
+        furo_uniforme();
     
        
         
         // Furo para fixação do imã
-        translate([0,0,-8]) ima();
-        translate([12,-14,-8]) ima();
-        translate([-12,-14,-8]) ima();
-        translate([-12,17,-8]) ima();
+      translate([0,0,-8.5]) ima();
+        translate([12,-14,-8.5]) ima();
+        translate([-12,-14,-8.5]) ima();
+        translate([-12,17,-8.5]) ima();
+    }
+}
+module furo_uniforme(){
+    hull(){
+        translate([12.5,20,-9]) rotate([90,0,0]) DS18B20();
+        translate([12.5,20,-5]) rotate([90,0,0]) DS18B20();
     }
 }
 
@@ -39,20 +40,19 @@ module tampa() {
 module DS18B20() {
     cylinder(d=7, h=54, center=true);
 }
-
 module ima() {
-    cylinder( d=8.3, h=3.5, center=true);
+    cylinder( d=8.3, h=3, center=true);
 }
 module nicho(){
     cube([36,3.4,1]);
     
     
 }
-translate([0,-30,0]) tampa();
+//translate([0,-30,0]) tampa();
 //rotate([0,0,-90])
 
         //nicho para melhor encaixe
-//translate([14,19,-0.2])rotate([0,0,-90])nicho();
-//translate([-17,19,-0.2])rotate([0,0,-90])nicho();
-//
-//caixa(); 
+translate([14,19,-0.2])rotate([0,0,-90])nicho();
+translate([-17,19,-0.2])rotate([0,0,-90])nicho();
+
+caixa();
