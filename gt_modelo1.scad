@@ -12,6 +12,7 @@ module caixa() {
         cube([larg,prof,alt], center=true);
         
         // Furo para o sensor DS18B20
+        //14mm da base até o inicio do buraco
         furo_uniforme();
     
        
@@ -26,7 +27,7 @@ module caixa() {
 module furo_uniforme(){
     hull(){
         translate([12.5,20,-9]) rotate([90,0,0]) DS18B20();
-        translate([12.5,20,-5]) rotate([90,0,0]) DS18B20();
+        translate([12.5,20,-7]) rotate([90,0,0]) DS18B20();
     }
 }
 
@@ -51,7 +52,8 @@ module nicho(){
 //translate([0,-30,0]) tampa();
 //rotate([0,0,-90])
 
-        //nicho para melhor encaixe
+//nicho para melhor encaixe
+//5mm de distancia da base
 translate([14,19,-0.2])rotate([0,0,-90])nicho();
 translate([-17,19,-0.2])rotate([0,0,-90])nicho();
 
