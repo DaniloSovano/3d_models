@@ -26,8 +26,9 @@ module caixa() {
 }
 module furo_uniforme(){
     hull(){
-        translate([12.5,20,-9]) rotate([90,0,0]) DS18B20();
-        translate([12.5,20,-7]) rotate([90,0,0]) DS18B20();
+        //25mm da base até o inicio do furo no eixo Y
+        translate([12.5,35.5,-9]) rotate([90,0,0]) DS18B20();
+        translate([12.5,35.5,-7.5]) rotate([90,0,0]) DS18B20();
     }
 }
 
