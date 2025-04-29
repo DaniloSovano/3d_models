@@ -35,7 +35,7 @@ module furo_uniforme(){
 module tampa() {
     difference() {
         translate([0,esp,0]) cube([larg+2*esp,esp,alt+2*esp], center=true);
-        translate([0,0,4])cube([8,10,3], center = true);
+        translate([0,0,4])cube([8,12,3], center = true);
     }
 }
 
@@ -50,12 +50,12 @@ module nicho(){
     
     
 }
-//translate([0,-30,0]) tampa();
+translate([0,-30,0]) tampa();
 //rotate([0,0,-90])
 
 //nicho para melhor encaixe
 //5mm de distancia da base
-translate([14,19,-0.2])rotate([0,0,-90])nicho();
-translate([-17,19,-0.2])rotate([0,0,-90])nicho();
-
-caixa();
+//translate([14,19,-0.2])rotate([0,0,-90])nicho();
+//translate([-17,19,-0.2])rotate([0,0,-90])nicho();
+//
+//caixa();
