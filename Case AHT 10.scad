@@ -21,6 +21,27 @@ module hasteSuperior(){
 
 }    
 
+//suporte entre as janelas superiores
+module trelicaSuperior(){
+    
+    cube([esp,prof-4,esp] , center = true);
+    
+}
+
+translate([35/5,0,10])trelicaSuperior();
+translate([-35/5,0,10])trelicaSuperior();
+
+
+module trelicaLateral(){
+    
+    cube([10,prof-4,1.5] , center = true);
+    
+}
+translate([34/2,0,-4])trelicaLateral();
+translate([-34/2,0,-4])trelicaLateral();
+
+
+
 //nicho para encaixe da placa
 module nicho() {
     
@@ -62,7 +83,7 @@ module caixa() {
                     hasteSuperior();
         }
         
-        translate([23,26,-4])cube([11,12,8.5], center = true);
+        translate([23,26,3])cube([10,10,4], center = true);
 
     }
 }
