@@ -34,7 +34,7 @@ translate([-35/5,0,10])trelicaSuperior();
 
 module trelicaLateral(){
     
-    cube([10,prof-4,1.5] , center = true);
+    cube([7,prof-4,1.5] , center = true);
     
 }
 translate([34/2,0,-4])trelicaLateral();
@@ -82,8 +82,8 @@ module caixa() {
                 translate([x, 10, 0])
                     hasteSuperior();
         }
-        
-        translate([23,26,3])cube([10,10,4], center = true);
+        //Entrada do cabo
+        translate([23,26,3])cube([10,10.5,6.5], center = true);
 
     }
 }
