@@ -2,7 +2,7 @@ $fn = 50;
 
 // Parâmetros da caixa
 larg = 40;
-alt = 18;
+alt = 20;
 prof = 70;
 esp = 2;
 
@@ -17,7 +17,7 @@ module hasteLateral() {
 }
 
 module hasteSuperior(){
-    cube([4, 3, 35], center = true);
+    cube([4, 5, 35], center = true);
 
 }    
 
@@ -28,8 +28,8 @@ module trelicaSuperior(){
     
 }
 
-translate([35/5,0,10])trelicaSuperior();
-translate([-35/5,0,10])trelicaSuperior();
+translate([35/5,0,11])trelicaSuperior();
+translate([-35/5,0,11])trelicaSuperior();
 
 
 module trelicaLateral(){
@@ -37,8 +37,8 @@ module trelicaLateral(){
     cube([7,prof-4,1.5] , center = true);
     
 }
-translate([34/2,0,-4])trelicaLateral();
-translate([-34/2,0,-4])trelicaLateral();
+translate([34/2,0,-7])trelicaLateral();
+translate([-34/2,0,-7])trelicaLateral();
 
 
 
@@ -67,12 +67,12 @@ module caixa() {
         // Recortes nas laterais 
         for (y = [-30, -20, -10, 0, 10]) {
             // Lado direito
-            translate([larg/2 + esp/2, y, 0])
+            translate([larg/2 + esp/2, y, 2])
                 hasteLateral();
         }
         for (y = [-30, -20, -10, 0, 10, 20, 30]) {
             // Lado esquerdo
-            translate([-larg/2 - esp/2, y, 0])
+            translate([-larg/2 - esp/2, y, 2])
                 hasteLateral();
         }
 
@@ -83,7 +83,7 @@ module caixa() {
                     hasteSuperior();
         }
         //Entrada do cabo
-        translate([23,26,3])cube([10,10.5,6.5], center = true);
+        translate([23,26,3])cube([10,11,6.5], center = true);
 
     }
 }
